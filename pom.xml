@@ -107,14 +107,18 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-					
-					<!-- workaround: Reflective Call Into JDK -->
-					<jvmArguments>
-					--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
-					</jvmArguments>
 				</configuration>
 			</plugin>
 			
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<argLine>
+						--add-opens java.base/java.lang=ALL-UNNAMED
+					</argLine>
+				</configuration>
+			</plugin>
+
 			<!-- avro-maven-plugin to generate classes for avro schemas -->
 			<plugin>
 				<groupId>org.apache.avro</groupId>
