@@ -1,0 +1,11 @@
+create table bank_customers_proxy (
+	customerid int primary key,
+	customername string,
+	customerattr1 string,
+	customerattr2 string,
+	products array<int>
+)
+with (
+	kafka_topic = 'bank-customers',
+	value_format = 'avro'
+);

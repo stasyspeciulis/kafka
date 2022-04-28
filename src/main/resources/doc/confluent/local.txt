@@ -1,0 +1,4 @@
+bootstrap servers: localhost:9092
+control center: http://localhost:9021
+ksqldb: localhost:8088
+schema registry: http://localhost:8081

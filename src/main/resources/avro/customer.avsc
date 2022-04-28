@@ -1,0 +1,18 @@
+{
+	"namespace": "javatechtask.kafka.avro.schemas",
+	"type": "record",
+	"name": "Customer",
+	"fields": [
+    	{"name": "customerId", "type": "int"},
+    	{"name": "customerName", "type": "string"},
+    	{"name": "customerAttr1", "type": ["null", "string"], "default": null},
+    	{"name": "customerAttr2", "type": ["null", "string"], "default": null},
+    	{
+    		"name": "products", 
+    		"type": {
+    			"type": "array", 
+    			"items": "int"
+    			}
+    	}
+	]
+}

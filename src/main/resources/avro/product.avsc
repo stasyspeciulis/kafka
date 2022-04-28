@@ -1,0 +1,11 @@
+{
+	"namespace": "javatechtask.kafka.avro.schemas",
+	"type": "record",
+	"name": "Product",
+	"fields": [
+    	{"name": "productId", "type": "int"},
+    	{"name": "productName", "type": "string"},
+    	{"name": "productAttr1", "type": ["null", "string"], "default": null},
+    	{"name": "productAttr2", "type": ["null", "string"], "default": null}
+	]
+}

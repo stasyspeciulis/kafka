@@ -1,0 +1,7 @@
+create table bank_customers_table
+as
+select
+  *
+from
+  bank_customers_proxy
+;

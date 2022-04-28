@@ -1,0 +1,5 @@
+6001;Scott Tiger JA;AA;50;5001,5002
+6002;John Gold JA;Bg;50;5001,5002
+6003;Clark Blake JA;Cg;50;5003,5004
+6004;Ford Smith JA;Dg;50;
+6005;Allen Ward JA;Eg;50

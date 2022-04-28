@@ -1,0 +1,2 @@
+#local
+confluent kafka topic create bank-products --partitions 1 --replication-factor 1 --no-auth --url http://localhost:8082

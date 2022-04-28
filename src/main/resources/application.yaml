@@ -1,0 +1,45 @@
+server:
+  port: 8902
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+    streams:
+      application-id: javatechtask
+    consumer:
+      group-id: javatechtask
+      auto-offset-reset: earliest
+
+ksqldb:
+  server:
+    host: localhost
+    port: 8088
+
+kafka:
+  topic:
+    products:
+      name: bank-products
+      partitions-num: 1
+      replication-factor: 1
+    customers:
+      name: bank-customers
+      partitions-num: 1
+      replication-factor: 1
+      
+service:
+  customer-top:
+    history-window-days: 10      
+
+dataloader:
+  base.path: /tmp/javatechtask-data
+  files.extension: .txt
+  files.product: product
+  files.customer: customer
+  files.charset: UTF-8
+  batch.date.pattern: yyyyMMdd_HH_mm
+  fields.separator: ;
+  scheduler.cron: 0 0/5 * * * *
+
+  

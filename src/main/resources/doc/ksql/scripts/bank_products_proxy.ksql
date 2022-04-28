@@ -1,0 +1,10 @@
+create table bank_products_proxy (
+	productid int primary key,
+	productname string,
+	productattr1 string,
+	productattr2 string
+)
+with (
+	kafka_topic = 'bank-products',
+	value_format = 'avro'
+);
