@@ -107,12 +107,19 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-				</configuration>
+					
+					<!-- workaround: Reflective Call Into JDK - for Springboot Run-->
+					<jvmArguments>
+						--add-opens java.base/java.lang=ALL-UNNAMED
+					</jvmArguments>			
+				</configuration>			
 			</plugin>
 			
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
+				
+					<!-- workaround: Reflective Call Into JDK - for Maven build and run Tests -->
 					<argLine>
 						--add-opens java.base/java.lang=ALL-UNNAMED
 					</argLine>
